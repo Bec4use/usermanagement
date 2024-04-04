@@ -16,9 +16,10 @@ const Login = () => {
     e.preventDefault();
     axios.post("http://localhost:3000/auth/login", values)
       .then(result => {
+        console.log(values);
         if (result.data.loginStatus) {
           console.log(result.data.message);
-          navigate('/auth/dashboard');
+          navigate('/dashboard');
         } else {
           console.log(result.data.message);
           setError(result.data.message);
