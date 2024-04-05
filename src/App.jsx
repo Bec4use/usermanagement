@@ -9,12 +9,16 @@ import AddDepartment from "./Components/Category/AddDepartment";
 import Adduser from "./Components/Usermanagement/Adduser";
 import Usermanagement from "./Components/Usermanagement/Usermanagement";
 import Edituser from "./Components/Usermanagement/Edituser";
+import LandingPage from "./Components/LandingPage";
+import RegisterForm from "./Components/Register";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<RegisterForm />}></Route>
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<Home />}></Route>
           <Route path="usersmanage" element={<Usermanagement />}>5</Route>

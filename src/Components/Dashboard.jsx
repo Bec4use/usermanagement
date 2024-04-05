@@ -1,7 +1,23 @@
 import { Link, Outlet } from 'react-router-dom';
-import { HiHome, HiUserGroup, HiViewGridAdd, HiUser, HiLogout } from 'react-icons/hi';
+import { HiHome, HiUserGroup, HiViewGridAdd, HiLogout } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    axios.get("http://localhost:3000/auth/logout")
+      .then(result => {
+        if (result.data.logoutStatus) {
+          console.log(result.data.message);
+          navigate('/login');
+        } else {
+          console.log(result.data.message);
+        }
+      })
+      .catch(err => console.log(err))
+  }
   return (
     <div className="flex  min-h-screen">
       {/* Sidebar */}
@@ -40,7 +56,7 @@ const Dashboard = () => {
                 <span className="text-lg">Departments</span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/dashboard/profile"
                 className="flex items-center p-2 rounded hover:bg-gray-800 transition duration-300"
@@ -48,15 +64,15 @@ const Dashboard = () => {
                 <HiUser className="w-6 h-6 mr-2" />
                 <span className="text-lg">Profile</span>
               </Link>
-            </li>
+            </li> */}
             <li>
-              <Link
-                to="/logout"
-                className="flex items-center p-2 rounded hover:bg-gray-800 transition duration-300"
+              <button
+                className="flex items-center p-2 rounded hover:bg-gray-800 transition duration-300 w-full"
+                onClick={handleLogout}
               >
                 <HiLogout className="w-6 h-6 mr-2" />
                 <span className="text-lg">Logout</span>
-              </Link>
+              </button>
             </li>
           </ul>
         </nav>

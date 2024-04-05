@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -28,14 +29,14 @@ const Login = () => {
       .catch(err => console.log(err))
   }
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login Form</h2>
+    <div className="flex items-center justify-center min-h-screen bg-gray-500">
+      <div className=" p-8 rounded-lg shadow-md w-full max-w-md bg-gray-700">
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-300">Login Form</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-gray-400 font-bold mb-2"
             >
               Email
             </label>
@@ -51,7 +52,7 @@ const Login = () => {
           <div className="mb-2">
             <label
               htmlFor="password"
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-gray-400 font-bold mb-2"
             >
               Password
             </label>
@@ -62,6 +63,12 @@ const Login = () => {
               onChange={(e) => setValues({ ...values, password: e.target.value })}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
+          </div>
+          <div className="mt-4">
+            <Link to="/register" className="inline-block align-baseline font-bold text-sm text-gray-500">
+              Do you have an account?
+              <span className="text-blue-500 hover:text-blue-800 ml-2">Register</span>
+            </Link>
           </div>
           <div className="h-8 mb-1 text-sm">
             {error && (
@@ -74,7 +81,7 @@ const Login = () => {
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
-              Submit
+              Login
             </button>
           </div>
         </form>

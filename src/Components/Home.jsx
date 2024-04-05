@@ -33,7 +33,7 @@ const lineData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
         {
-            label: 'Sales',
+            label: 'User',
             data: [120, 150, 110, 140, 180, 170, 160, 190, 200, 180, 170, 210],
             borderColor: '#6366F1',
             backgroundColor: 'rgba(99, 102, 241, 0.2)',
@@ -42,7 +42,7 @@ const lineData = {
 };
 
 const pieData = {
-    labels: ['Desktop', 'Tablet', 'Phone'],
+    labels: ['Accounts', 'Users', 'Departments'],
     datasets: [
         {
             data: [80, 15, 5],
@@ -104,7 +104,7 @@ const Home = () => {
             });
     }
     return (
-        <div className="bg-gray-200 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-gray-700 text-white p-6 shadow-lg min-h-screen">
             <div className="grid grid-cols-4 gap-4 mb-6">
                 <div className="bg-gray-800 p-4 rounded-lg">
                     <p className="text-gray-400">TOTAL ACCOUNT</p>

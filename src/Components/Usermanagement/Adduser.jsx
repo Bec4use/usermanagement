@@ -72,9 +72,14 @@ const Adduser = () => {
     }, []);
     return (
 
-        <div className="flex flex-col items-center justify-center min-h-screen py-12 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center min-h-screen py-12 sm:px-6 lg:px-8 bg-gray-700">
             <div className="bg-gray-800 text-gray-300 rounded-lg shadow-lg p-6 w-full max-w-3xl">
-                <h2 className="text-2xl font-bold mb-4 text-center">User Management</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">
+                    User Management
+                </h2>
+                <h2 className="text-md font-bold mb-4 text-center">
+                    Create new User
+                </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4 flex justify-end">
                         <button

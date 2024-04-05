@@ -24,7 +24,7 @@ const AddDepartment = () => {
     }
 
     return (
-        <div className="mt-20">
+        <div className="flex justify-center items-center bg-gray-700 min-h-screen">
             <div className="bg-gray-800 text-gray-200 p-6 rounded-lg shadow-md w-1/2 mx-auto">
                 <h2 className="text-2xl font-bold mb-4">Add Category</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">

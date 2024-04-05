@@ -88,7 +88,7 @@ const Edituser = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4 sm:px-6 lg:px-8 bg-gray-700">
             <div className="bg-gray-800 text-gray-300 rounded-lg shadow-lg p-6 w-full max-w-3xl">
                 <h2 className="text-2xl font-bold mb-4 text-center">
                     Edit Information

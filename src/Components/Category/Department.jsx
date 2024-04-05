@@ -21,7 +21,7 @@ const Department = () => {
             });
     }, [])
     return (
-        <div className='flex justify-center items-center mt-20'>
+        <div className='flex justify-center items-center bg-gray-700 min-h-screen'>
             <div className="bg-gray-800 text-gray-100 p-4 rounded-md w-1/2">
                 <div className="mb-4 p-4">
                     <h3 className="text-xl font-bold">Departments</h3>
