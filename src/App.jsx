@@ -11,6 +11,7 @@ import Usermanagement from "./Components/Usermanagement/Usermanagement";
 import Edituser from "./Components/Usermanagement/Edituser";
 import LandingPage from "./Components/LandingPage";
 import RegisterForm from "./Components/Register";
+import ProfileUser from "./Components/Profile/Profileuser";
 
 export default function App() {
   return (
@@ -24,7 +25,8 @@ export default function App() {
           <Route path="usersmanage" element={<Usermanagement />}>5</Route>
           <Route path="category" element={<Department />}>
           </Route>
-          <Route path="profile" element={<Profile />}></Route>
+          <Route path="profile" element={<ProfileUser />}></Route>
+          <Route path="profileuser" element={<Profile />}></Route>
           <Route path="add_category" element={<AddDepartment />}></Route>
           <Route path="add_user" element={<Adduser />}></Route>
           <Route path="edit_user/:id" element={<Edituser />}></Route>

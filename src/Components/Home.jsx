@@ -104,47 +104,49 @@ const Home = () => {
             });
     }
     return (
-        <div className="bg-gray-700 text-white p-6 shadow-lg min-h-screen">
-            <div className="grid grid-cols-4 gap-4 mb-6">
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <p className="text-gray-400">TOTAL ACCOUNT</p>
-                    <div className="flex items-center">
-                        <span className="text-2xl font-bold">{adminTotal}</span>
-                        <span className="ml-2 text-green-500">
-                            <i className="fas fa-arrow-down"></i> User
-                        </span>
+        <div className='flex justify-center items-center'>
+            <div className="bg-gray-700 text-white p-6 shadow-lg min-h-screen w-3/4">
+                <div className="grid grid-cols-4 gap-4 mb-6">
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <p className="text-gray-400">TOTAL ACCOUNT</p>
+                        <div className="flex items-center">
+                            <span className="text-2xl font-bold">{adminTotal}</span>
+                            <span className="ml-2 text-green-500">
+                                <i className="fas fa-arrow-down"></i> User
+                            </span>
+                        </div>
+                        <p className="text-gray-400">Since last month</p>
                     </div>
-                    <p className="text-gray-400">Since last month</p>
-                </div>
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <p className="text-gray-400">TOTAL CUSTOMERS</p>
-                    <div className="flex items-center">
-                        <span className="text-2xl font-bold">{userTotal}</span>
-                        <span className="ml-2 text-green-500">
-                            <i className="fas fa-arrow-up"></i> User
-                        </span>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <p className="text-gray-400">TOTAL CUSTOMERS</p>
+                        <div className="flex items-center">
+                            <span className="text-2xl font-bold">{userTotal}</span>
+                            <span className="ml-2 text-green-500">
+                                <i className="fas fa-arrow-up"></i> User
+                            </span>
+                        </div>
+                        <p className="text-gray-400">Since last month</p>
                     </div>
-                    <p className="text-gray-400">Since last month</p>
-                </div>
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <p className="text-gray-400">TOTAL DEPARTMENT</p>
-                    <div className="flex items-center">
-                        <span className="text-2xl font-bold">{departmentTotal}</span>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <p className="text-gray-400">TOTAL DEPARTMENT</p>
+                        <div className="flex items-center">
+                            <span className="text-2xl font-bold">{departmentTotal}</span>
+                        </div>
+                    </div>
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <p className="text-gray-400">TOTAL PROFIT</p>
+                        <div className="flex items-center">
+                            <span className="text-2xl font-bold">$15k</span>
+                        </div>
                     </div>
                 </div>
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <p className="text-gray-400">TOTAL PROFIT</p>
-                    <div className="flex items-center">
-                        <span className="text-2xl font-bold">$15k</span>
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <Line data={lineData} options={{ plugins: { legend: { labels: { color: 'rgb(255, 255, 255)' } } } }} />
                     </div>
-                </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <Line data={lineData} options={{ plugins: { legend: { labels: { color: 'rgb(255, 255, 255)' } } } }} />
-                </div>
-                <div className="bg-gray-800 p-4 rounded-lg">
-                    <Pie data={pieData} options={{ plugins: { legend: { labels: { color: 'rgb(255, 255, 255)' } } } }} />
+                    <div className="bg-gray-800 p-4 rounded-lg">
+                        <Pie data={pieData} options={{ plugins: { legend: { labels: { color: 'rgb(255, 255, 255)' } } } }} />
+                    </div>
                 </div>
             </div>
         </div>

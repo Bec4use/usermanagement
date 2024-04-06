@@ -8,7 +8,7 @@ const AddDepartment = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:3000/api/add_department", { department }, { withCredentials: true })
+        axios.post("http://localhost:3000/api/department", { department }, { withCredentials: true })
             .then((result) => {
                 if (result.data.Status) {
                     alert(result.data.message);
